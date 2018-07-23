@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="opioid_risk.js"></script>
+	<title>Opioid Risk Assessment</title>
+	<link rel="stylesheet" type="text/css" href="opioid_risk.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+	<div class="container">
+		<h2>Opioid Risk Assessment</h2>
+		<span style="display:inline-block; width: 10px;"></span>
+		<div class="gender-select centered sub">
+			<p>Select patient's gender</p>
+			<span style="display:inline-block; width: 10px;"></span>
+			<select id="gender">
+				<option value="0"><p class="tab">Select gender</p></option>
+				<option value="1">Male</option>
+				<option value="3">Female</option>
+			</select>
+		</div>
+		
+
+		<div class="table-responsive centered">
+			<table class="table">
+
+				<thead>
+					<tr>
+						<th>Item</th>
+						<th>Mark each box that applies</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr><td colspan="2"><b>Family History of Substance Abuse:</b></td></tr>
+						<tr>
+							<td class="sub">Alcohol</td>
+							<td>
+								<div>
+								  <label class="label">
+									<input class="label__checkbox" id="1a" type="checkbox">
+									<span class="label__text">
+									  <span class="label__check">
+										<i class="fa fa-check icon"></i>
+									  </span>
+									</span>
+								  </label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="sub">Illegal Drugs</td>
+							<td>
+								<label class="label">
+									<input class="label__checkbox" id="1b" type="checkbox">
+										<span class="label__text">
+										<span class="label__check">
+										<i class="fa fa-check icon"></i>
+									  </span>
+									</span>
+								  </label>
+							</td>
+						</tr>
+						<tr>
+							<td class="sub">Prescription Drugs</td>
+							<td>
+								<label class="label">
+									<input class="label__checkbox" id="1c" type="checkbox">
+									<span class="label__text">
+									  <span class="label__check">
+										<i class="fa fa-check icon"></i>
+									  </span>
+									</span>
+								  </label>
+							</td>
+						</tr>	
+					<tr><td colspan="2"><b>Personal History of Substance Abuse:</b></td></tr>
+						<tr>
+							<td class="sub">Alcohol</td>
+							<td>
+															  <label class="label">
+									<input class="label__checkbox" id="2a" type="checkbox">
+									<span class="label__text">
+									  <span class="label__check">
+										<i class="fa fa-check icon"></i>
+									  </span>
+									</span>
+								  </label>
+							</td>
+						</tr>
+						<tr>
+							<td class="sub">Illegal Drugs</td>
+							<td>
+															  <label class="label">
+									<input class="label__checkbox" id="2b" type="checkbox">
+									<span class="label__text">
+									  <span class="label__check">
+										<i class="fa fa-check icon"></i>
+									  </span>
+									</span>
+								  </label>
+							</td>
+						</tr>
+						<tr>
+							<td class="sub">Prescription Drugs</td>
+							<td>
+																  <label class="label">
+									<input class="label__checkbox" id="2c" type="checkbox">
+									<span class="label__text">
+									  <span class="label__check">
+										<i class="fa fa-check icon"></i>
+									  </span>
+									</span>
+								  </label>
+							</td>
+						</tr>
+					<tr>
+						<td><b>Age (mark box if 16-45)</b></td>
+						<td>
+															  <label class="label">
+									<input class="label__checkbox" id="3a" type="checkbox">
+									<span class="label__text">
+									  <span class="label__check">
+										<i class="fa fa-check icon"></i>
+									  </span>
+									</span>
+								  </label>
+						</td>
+					</tr>
+
+					<tr>
+						<td><b>History of Preadolescent Sexual Abuse</b></td>
+						<td>
+															  <label class="label">
+									<input class="label__checkbox" id="4a" type="checkbox">
+									<span class="label__text">
+									  <span class="label__check">
+										<i class="fa fa-check icon"></i>
+									  </span>
+									</span>
+								  </label>
+						</td>
+					</tr>
+
+					<tr><td colspan="2"><b>Psychological Disease</b></td></tr>
+						<tr>
+							<td class="sub">Attention Deficit Disorder,
+							Obsessive-Compulsive Disorder, or
+							Bipolar, Schizophrenia</td>
+							<td>
+																  <label class="label">
+									<input class="label__checkbox" id="5a" type="checkbox">
+									<span class="label__text">
+									  <span class="label__check">
+										<i class="fa fa-check icon"></i>
+									  </span>
+									</span>
+								  </label>
+							</td>
+						</tr>
+						<tr>
+							<td class="sub">Depression</td>
+							<td>
+																  <label class="label">
+									<input class="label__checkbox" id="5b" type="checkbox">
+									<span class="label__text">
+									  <span class="label__check">
+										<i class="fa fa-check icon"></i>
+									  </span>
+									</span>
+								  </label>
+							</td>
+						</tr>					
+				</tbody>
+			</table>
+		</div>
+		<button type="submit" style="float:right;" OnClick="displayResult()">Submit</button>
+		<b>Result:</b><p id="result"> Please fill out the form.</p>
+	</div>
+
+
+</body>
+</html>
